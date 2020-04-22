@@ -26,9 +26,9 @@ public class DrillCategoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_drill_category);
 
         //получаем ссылку на экшенбар и если не равно нал - скрываем
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.hide();
+            ActionBar actionBar = getSupportActionBar();
+            if (actionBar != null) {
+                actionBar.hide();
         }
         listViewDrills = findViewById(R.id.listViewDrills);
 
@@ -46,7 +46,7 @@ public class DrillCategoryActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Drill drill = drills.get(position);
-                Intent intent = new Intent(getApplicationContext(),DrillCategoryActivity.class);
+                Intent intent = new Intent(getApplicationContext(),DrillDetailActivity.class);
                 intent.putExtra("title",drill.getTitle());
                 intent.putExtra("info",drill.getInfo());
                 intent.putExtra("resId",drill.getImageResourceId());
